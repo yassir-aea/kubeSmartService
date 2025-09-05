@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kubeSmartService"
+version = "0.1.1"
+description = "Smart Kubernetes service resolver for Python web apps with health-check and failover"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+  { name = "Yassir AIT EL AIZZI", email = "yassiraitelaizzi@gmail.com" }
+]
+keywords = ["kubernetes", "service", "failover", "healthcheck", "django", "flask"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Internet :: WWW/HTTP",
+  "Topic :: System :: Distributed Computing"
+]
+dependencies = [
+  "kubernetes>=29.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/example/kubeSmartService"
+Repository = "https://github.com/example/kubeSmartService"
+Issues = "https://github.com/example/kubeSmartService/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = false
+
+[tool.setuptools.package-data]
+kubesmartservice = ["py.typed"]
+
+
